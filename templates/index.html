@@ -1,17 +1,17 @@
 {% extends 'layout.html' %}
-
+{% load static %}
 {% block content %}
 
     <div class="row">
         <div class="col-md-12">
-            <h1>Resume App</h1>
+            <h1 class="myHeader">Resume App</h1>
         </div>
     </div>
 
     <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur autem consectetur dicta eligendi eum eveniet exercitationem iure iusto nihil pariatur porro possimus quo repellat saepe sed tempora tenetur, unde veritatis.</span><span>Aperiam, atque autem consequuntur, cum cumque id, iure maiores modi molestias natus perferendis placeat repellat saepe sit tempore ullam veritatis. Alias at error est maiores reiciendis tenetur ullam? Cum, expedita!</span><span>Amet aperiam at fugit iure, quod repellat tenetur unde ut velit? Aperiam atque culpa doloribus ex excepturi exercitationem fuga impedit laborum, molestiae nam nihil, nulla odio possimus provident sapiente. Cupiditate.</span><span>Aliquid facilis fugit in itaque iusto non numquam perferendis, porro quaerat repellendus, tempora totam, voluptatibus voluptatum. Accusamus dicta iusto suscipit tenetur vel. Ad eligendi omnis quas sit velit. Aspernatur, quasi.</span><span>Asperiores assumenda doloremque dolores esse impedit in ipsam iste, laborum, mollitia nemo neque nesciunt nihil qui quisquam reiciendis repellat repellendus saepe sapiente sit voluptatibus. Culpa deserunt distinctio facere facilis repellat!</span><span>Blanditiis et ipsum minima nemo. Alias animi aperiam asperiores aspernatur assumenda commodi cum delectus dicta doloremque et fugiat itaque iusto laborum mollitia neque non odit rerum sit, suscipit temporibus totam.</span><span>Ad sed vel vitae. Animi atque eaque, incidunt ipsum laudantium minima molestiae molestias nam non odio reprehenderit sit temporibus. Beatae eligendi, error excepturi iure maiores modi quaerat quibusdam sint suscipit.</span><span>Dignissimos dolore doloribus dolorum impedit ipsa minus modi natus necessitatibus non porro quaerat qui sit tenetur, totam vitae? Dolore est ipsa labore, maxime modi molestias nobis odio porro rem vitae.</span><span>Accusantium ad aperiam asperiores consequatur consequuntur debitis deleniti deserunt distinctio dolorum eligendi esse excepturi hic illo illum laboriosam non, quae quaerat qui repudiandae saepe tempora ullam veniam vitae voluptates voluptatum!</span><span>Cumque fuga illum incidunt placeat qui quo, ut. Adipisci eius inventore iste molestias porro quo, sed tenetur. Blanditiis deleniti eligendi eum exercitationem in ipsum laboriosam, non optio, perferendis veniam vitae!</span>
     </p>
     <div class="card" style="width: 18rem;">
-        <img src="https://placehold.co/450x300/000000/FFFFFF/png" class="card-img-top" alt="...">
+        <img src="{% get_media_prefix %}image.jpg" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -22,6 +22,6 @@
 {% endblock %}
 {% block extra_scripts %}
     <script>
-    console.log("deneme")
+        console.log("deneme")
     </script>
 {% endblock %}
