@@ -9,5 +9,7 @@ def contact_form(request):
         'message': 'Contact form sent successfully'
     }
     return JsonResponse(context)
+
+
 def contact(request):
     return render(request, 'contact.html')
