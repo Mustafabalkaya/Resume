@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block banner_area %}
+
     <section class="home_banner_area">
         <div class="container box_1620">
             <div class="banner_inner d-flex align-items-center">
@@ -18,23 +19,21 @@
                                 <h4>{{ home_banner_title }}</h4>
                                 <p>{{ home_banner_description }}</p>
                                 <ul class="list basic_info">
-                                    <li><a href="javascript:void(0)"><i class="lnr lnr-calendar-full"></i> 19th June ,
-                                        1999</a></li>
-                                    <li><a href="tel:+905053997349"><i class="lnr lnr-phone-handset"></i> +90 505 399
-                                        7349</a></li>
-                                    <li><a href="mailto:balkayamustafa99@gmail.com"><i class="lnr lnr-envelope"></i>
-                                        balkayamustafa99@gmail.com</a></li>
-                                    <li><a href="#"><i class="lnr lnr-home"></i> Kahramanmaras, Turkey </a></li>
+                                    <li><a href="javascript:void(0)"><i class="lnr lnr-calendar-full"></i> 31st December, 1992</a></li>
+                                    <li><a href="tel:+90555445566"><i class="lnr lnr-phone-handset"></i> +90 (555) 554 5566</a></li>
+                                    <li><a href="mailto:businessplan@donald.com"><i class="lnr lnr-envelope"></i> info@donald.com</a></li>
+                                    <li><a href="#"><i class="lnr lnr-home"></i> Santa monica bullevard</a></li>
                                 </ul>
                                 <ul class="list personal_social">
                                     {% for social in social_medias %}
                                         <li><a href="{{ social.link }}" target="_blank">{{ social.icon|safe }}</a></li>
                                     {% endfor %}
-
                                 </ul>
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
@@ -42,7 +41,10 @@
 
 {% endblock %}
 
+
 {% block content %}
+
+    <!--================Welcome Area =================-->
     <section class="welcome_area p_120">
         <div class="container">
             <div class="row welcome_inner">
@@ -50,24 +52,31 @@
                     <div class="welcome_text">
                         <h4>About Myself</h4>
                         <p>{{ about_myself_welcome }}</p>
+
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="tools_expert">
                         <div class="skill_main">
+
+
+
+
                             {% for skill in skills %}
                                 <div class="skill_item">
                                     <h4>{{ skill.name }} <span class="counter">{{ skill.percentage }}</span>%</h4>
                                     <div class="progress_br">
                                         <div class="progress">
-                                            <div class="progress-bar" role="progressbar"
-                                                 aria-valuenow="{{ skill.percentage }}"
-                                                 aria-valuemin="0"
-                                                 aria-valuemax="100"></div>
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.percentage }}"
+                                                 aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div>
                             {% endfor %}
+
+
+
+
                         </div>
                     </div>
                 </div>
@@ -93,18 +102,18 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <ul class="list">
+
                             {% for experience in experiences %}
                                 <li>
                                     <span></span>
                                     <div class="media">
                                         <div class="d-flex">
-                                            <p>{{ experience.start_date|date:'M Y' }} -
+                                            <p>{{ experience.start_date|date:"M Y" }} -
                                                 {% if experience.end_date %}
-                                                    {{ experience.end_date|date:'M Y' }}
+                                                    {{ experience.end_date|date:"M Y" }}
                                                 {% else %}
                                                     Present
                                                 {% endif %}
-
                                             </p>
                                         </div>
                                         <div class="media-body">
@@ -114,6 +123,7 @@
                                     </div>
                                 </li>
                             {% endfor %}
+
                         </ul>
                     </div>
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -123,13 +133,12 @@
                                     <span></span>
                                     <div class="media">
                                         <div class="d-flex">
-                                            <p>{{ education.start_date|date:'M Y' }} -
+                                            <p>{{ education.start_date|date:"M Y" }} -
                                                 {% if education.end_date %}
-                                                    {{ education.end_date|date:'M Y' }}
+                                                    {{ education.end_date|date:"M Y" }}
                                                 {% else %}
                                                     Present
                                                 {% endif %}
-
                                             </p>
                                         </div>
                                         <div class="media-body">
@@ -149,10 +158,4 @@
     <!--================End My Tabs Area =================-->
 
 
-
-
-
-
 {% endblock %}
-
-

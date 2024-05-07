@@ -24,6 +24,7 @@ services:
     command: gunicorn Django.wsgi:application --bind 0.0.0.0:8000
 
 
+
 volumes:
   postgresql-data:
   static-data:
