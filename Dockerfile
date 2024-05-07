@@ -9,5 +9,6 @@ RUN pip install virtualenv && python -m virtualenv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 ADD ./requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
+
 COPY . /srv/app
 WORKDIR /srv/app
