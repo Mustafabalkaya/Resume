@@ -1,6 +1,8 @@
 FROM python:3.12-slim
 RUN apt-get update
+RUN apt-get install libpq-dev -y
 RUN apt-get install python3-dev build-essential -y
+RUN apt-get install postgresql-client -y
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV VIRTUAL_ENV=/opt/venv
 RUN pip install --upgrade pip
